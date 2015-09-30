@@ -1,0 +1,28 @@
+body {
+  background-color: #fafafa;
+  color: #666666;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 10vh 10vw;
+  text-align: center; }
+
+h1 {
+  font-size: 3em;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-bottom: 6rem; }
+
+.box {
+  background-color: #ffffff;
+  border: 1px solid #ededed;
+  padding: 2em;
+  margin-bottom: 2em; }
+
+.data {
+  color: #08c;
+  font-size: 2em;
+  font-weight: 100; }
+
+/*# sourceMappingURL=style.css.map */

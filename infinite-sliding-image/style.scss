@@ -1,0 +1,25 @@
+$img-w:  5912px;
+$img-h:  389px;
+$shrink: 2;
+$ratio:  1 / $shrink;
+$speed:  20s;
+
+.slide {
+	position: absolute;
+	width: 100%;
+	top: calc(50% - #{$img-h * $ratio / 2}); 	// 此处存疑
+	overflow: scroll;
+	.slide-row {
+		width: $img-w * $ratio;
+		height: $img-h * $ratio;
+		background-image: url(image.png);
+		background-size: $img-w * $ratio $img-h * $ratio;
+		// background-size: 100% 100%;
+		animation: slide $speed linear infinite;
+	}
+}
+
+@keyframes slide {
+	from { background-position-x: 0; }
+	to 	 { background-position-x: -$img-w * $ratio;}
+}
