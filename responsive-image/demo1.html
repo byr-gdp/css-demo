@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  /*demo2*/
+  .demo2 img {
+    width: 100%;
+  }
+
+  /*demo3*/
+  .demo3 img {
+    width: 100%;
+  }
+
+  .demo3-1 {
+    max-width: 560px;
+  }
+
+  .demo3-2 {
+    max-width: 440px;
+  }
+
+  .demo3-3 {
+    max-width: 300px;
+  }
+
+
+  /*demo4*/
+  .demo4 .row {
+    overflow: hidden;
+  }
+
+  .demo4 .img-wrap {
+    float:    left;
+  }
+
+  .demo4 img {
+    width: 100%;
+  }
+
+  /*demo5*/
+  .demo5 .img-wrap {
+    float: left;
+    clear: left;
+  }
+  .demo5 img {
+    width: 100%;
+  }
+
+  /*清除demo4浮动*/
+  h1 {
+    clear: left;
+  }
+
+  /*demo6*/
+  .demo6 .img-wrap {
+    display: inline-block;
+  }
+
+  .demo6 .img-wrap img {
+    width: 100%;
+  }
+
+
+  </style>
+</head>
+<body>
+  <h1>Question: overflow & inline-block</h1>
+  <h1>demo1: 原始状态</h1>
+  <div class="demo1">
+    <img src="560*200.jpg" alt="">
+    <br>
+    <img src="440*200.jpg" alt="">
+    <br>
+    <img src="300*200.jpg" alt="">
+  </div>
+  <hr>
+  <h1>Step 2: width: 100%</h1>
+  <div class="demo2">
+    <img src="560*200.jpg" alt="">
+    <img src="440*200.jpg" alt="">
+    <img src="300*200.jpg" alt="">
+  </div>
+  <hr>
+  <h1>Step 3: width: 100%; 分别设置max-width</h1>
+  <div class="demo3">
+    <img src="560*200.jpg" alt="" class="demo3-1">
+    <img src="440*200.jpg" alt="" class="demo3-2">
+    <img src="300*200.jpg" alt="" class="demo3-3">
+  </div>
+  <hr>
+  <h1>demo4: width: 100%; float: left</h1>
+  <div class="demo4">
+    <div class="row">
+      <div class="img-wrap">
+        <img src="560*200.jpg" alt="">
+      </div>
+    </div>
+    <div class="row">
+       <div class="img-wrap">
+        <img src="440*200.jpg" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="img-wrap">
+        <img src="300*200.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <h1>demo5: width: 100%; float: left; clear: left</h1>
+  <div class="demo5">
+    <div class="img-wrap">
+      <img src="560*200.jpg" alt="">
+    </div>
+    <div class="img-wrap">
+      <img src="440*200.jpg" alt="">
+    </div>
+    <div class="img-wrap">
+      <img src="300*200.jpg" alt="">
+    </div>
+  </div>
+  <hr>
+  <h1>demo6: width: 100%; inline-block</h1>
+  <div class="demo6">
+    <div class="img-wrap">
+      <img src="560*200.jpg" alt="">
+    </div>
+    <br>
+    <div class="img-wrap">
+      <img src="440*200.jpg" alt="">
+    </div>
+    <br>
+    <div class="img-wrap">
+      <img src="300*200.jpg" alt="">
+    </div>
+  </div> 
+</body>
+</html>
