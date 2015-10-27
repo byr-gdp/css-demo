@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>carousel control</title>
+  <style>
+  * {
+    margin:  0;
+    padding: 0;
+  }
+  .container {
+    /*overflow: hidden;*/
+    position: relative;
+    height: 100px;
+  }
+  
+  .container .nav {
+    list-style: none;
+  }
+
+  .container .nav li {
+    position:    absolute;
+    box-sizing:  border-box;
+    height:      50px;
+    line-height: 30px;
+    text-align:  center;
+    width:       100%;
+    color:       black;
+    border:      10px solid black;
+    font-size:   24px;
+  }
+ /* .container .nav li:nth-child(odd) {
+    background-color: #efefef;
+    color: black;
+  }
+
+  .container .nav li:nth-child(even) {
+    background-color: #3e3e3e;
+    color: white;
+  }*/
+  </style>
+</head>
+<body>
+  <button onclick="move('left')">left</button>
+  <button onclick="move('right')">right</button>
+  <div class="container">
+    <ul class="nav">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+  </div>
+</body>
+<script>
+  var lis = [].slice.apply(document.getElementsByTagName("li"));
+  var len    = lis.length;
+  var scaleW = window.innerWidth;
+  var timer  = null;
+
+  // console.log(lis);
+
+  for(var i=0; i<len; i++) {
+    if(i==0) {
+      lis[i].style.webkitTransform = "translate3d(" + i * scaleW + "px, 0, 0)";
+    } else if(i==len-1) {
+      lis[i].style.webkitTransform = "translate3d(-" + scaleW + "px, 0, 0)";
+    } else {
+      lis[i].style.webkitTransform = "translate3d(" + scaleW + "px, 0, 0)";
+    }
+  }
+
+  function move(flag) {
+    for(var i=lis.length-1; i>=0; i--) {
+      lis[i].style.webkitTransition = "";
+    }
+    if(flag=="left") {
+      lis.unshift(lis.pop());
+      lis[len-1].style.webkitTransform = "translate3d(-" + scaleW + "px, 0, 0)";
+      lis[0].style.webkitTransition = "-webkit-transform 0.5s ease-out";
+      lis[1].style.webkitTransition = "-webkit-transform 0.5s ease-out";
+
+      lis[0].style.webkitTransform = "translate3d(0, 0, 0)";
+      lis[1].style.webkitTransform = "translate3d(" + scaleW + "px, 0, 0)";
+    } else if(flag=="right") {
+      lis.push(lis.shift());
+
+      lis[1].style.webkitTransform = "translate3d(" + scaleW + "px, 0, 0)";
+      lis[0].style.webkitTransition = "-webkit-transform 0.5s ease-out";
+      lis[len-1].style.webkitTransition = "-webkit-transform 0.5s ease-out";
+
+      lis[0].style.webkitTransform = "translate3d(0, 0, 0)";
+      lis[len-1].style.webkitTransform = "translate3d(-" + scaleW + "px, 0, 0)";
+    }
+  }
+
+  timer = setInterval(function() {
+    move('right');
+  }, 2000);
+</script>
+</html>

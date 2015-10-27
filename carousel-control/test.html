@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>carousel control</title>
+  <style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    /*transform: translate3d( 100px, 0, 0);*/
+    /*transition: all 1s ease-in;*/
+    -webkit-transform: translate3d( 200px, 0, 0);
+  }
+  </style>
+</head>
+<body>
+  <button onclick="next()"></button>
+  <br>
+  <button onclick="end()"></button>
+  <div class="box">
+    
+  </div>
+<script>
+  function next() {
+    var box = document.getElementsByTagName("div")[0];
+    box.style.webkitTransition = "-webkit-transform 1s ease-in";
+    box.style.webkitTransform = "translate3d(400px, 0, 0)";
+  }
+
+  function end() {
+    var box = document.getElementsByTagName("div")[0];
+    box.style.webkitTransition = "-webkit-transform 0.5s ease-out";
+    box.style.webkitTransform = "translate3d(0, 400px, 0)";
+  }
+</script>
+</body>
+</html>
