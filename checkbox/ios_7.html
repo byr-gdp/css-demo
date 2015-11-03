@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  .checkbox {
+    display: none;
+  }
+  
+  .checkbox-wrapper {
+    width: 58px;
+    height: 32px;
+    position: relative;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    transition: all .3s ease-out;
+    border: 1px solid #efefef;
+    box-sizing: content-box;
+  }
+
+  .checkbox-label {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+
+    /*box-shadow: 0 2px 3px rgb(0, 0, 0, 0.2);*/
+  }
+
+  .checkbox:checked + .checkbox-wrapper {
+    background-color: #0bd318;
+  }
+
+  .checkbox:checked + .checkbox-wrapper .checkbox-label {
+    left: 26px;
+  }
+  </style>
+</head>
+<body>
+  <h1>iOS 7</h1>
+  <input type="checkbox" id="checkbox" class="checkbox">
+  <div class="checkbox-wrapper">
+    <label for="checkbox" class="checkbox-label"></label>
+  </div>
+</body>
+</html>

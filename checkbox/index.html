@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  .checkbox-wrapper {
+    width: 80px;
+    height: 32px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .checkbox {
+    display: none;
+  }
+  .checkbox-label {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 32px;
+    transition: all .4s ease;
+    cursor: pointer;
+    background: #EEEEEE;
+}
+  .checkbox-label::before,
+  .checkbox-label::after {
+    font-size:   13px;
+    color:       #FFFFFF;
+    position:    absolute;
+    font-weight: bold;
+    line-height: 32px;
+    height:      32px;
+    width:       40px;
+    text-align:  center;
+  }
+  .checkbox-label::before {
+    content: 'ON';
+    background-color: #60BEB3;
+    left: -40px;
+  }
+  .checkbox-label::after {
+    content: 'OFF';
+    background-color: #E52B50;
+    right: -40px;
+  }
+  .checkbox:checked + .checkbox-wrapper .checkbox-label {
+    left: 40px;
+  }
+  </style>
+</head>
+<body>
+  <h1>Metro UI</h1>
+  <input type="checkbox" id="checkbox" class="checkbox">
+  <div class="checkbox-wrapper">
+    <label for="checkbox" class="checkbox-label"></label>
+  </div>
+</body>
+</html>
