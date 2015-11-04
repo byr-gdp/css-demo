@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  body {
+    background-color: #EFEFEF;
+  }
+  
+  .arrow-right {
+    width:            100px;
+    height:           100px;
+    background-color: #0E2F56;
+    border-radius:    50px;
+    position:         relative;
+  }
+  
+  .line {
+    display:          block;
+    /*width:          60px;*/
+    height:           10px;
+    background-color: #FFFFFF;
+    /*border:         1px solid #FFFFFF;*/
+    /*border:         1px solid red;*/
+  }
+  
+  .line-1 {
+    width:    60px;
+    position: absolute;
+    top:      45px;
+    left:     17px;
+  }
+
+  .line-2,
+  .line-3 {
+    width: 48px;
+  }
+
+  .line-2 {
+    position:  absolute;
+    top:       31px;
+    right:     12px;
+    transform: rotate(45deg);
+  }
+
+  .line-3 {
+    position:  absolute;
+    bottom:    31px;
+    right:     11px;
+    transform: rotate(-45deg);
+  }
+  </style>
+</head>
+<body>
+  <div class="arrow-right">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+    <span class="line line-3"></span>
+  </div>
+</body>
+</html>
