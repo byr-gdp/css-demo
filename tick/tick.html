@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  body {
+    background-color: #EFEFEF;
+  }
+
+  .tick {
+    width:            100px;
+    height:           100px;
+    background-color: #0E2F56;
+    border-radius:    50px;
+    position:         relative;
+  }
+
+  .primary {
+    display: block;
+    width: 60px;
+    height: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50px;
+    left: 33px;
+    transform: rotate(-50deg);
+  }
+
+  .vice {
+    display: block;
+    width: 40px;
+    height: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 59px;
+    left: 15px;
+    transform: rotate(40deg);
+  }
+  </style>
+</head>
+<body>
+  <div class="tick">
+    <span class="primary"></span>  
+    <span class="vice"></span>
+  </div>
+</body>
+</html>
