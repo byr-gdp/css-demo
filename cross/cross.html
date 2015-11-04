@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  body {
+    background-color: #EFEFEF;
+  }
+
+  .cross {
+    width:            100px;
+    height:           100px;
+    background-color: #0E2F56;
+    border-radius:    50px;
+    position:         relative;
+  }
+
+  .line {
+    display: block;
+    width: 60px;
+    height: 10px;
+    background-color: #FFFFFF;
+  }
+
+  .line-1 {
+    position: absolute;
+    top:      45px;
+    left:     20px;
+    transform: rotate(45deg);
+  }
+
+  .line-2 {
+    position: absolute;
+    top:      45px;
+    left:     20px;
+    transform: rotate(-45deg);
+  }
+  </style>
+</head>
+<body>
+  <div class="cross">
+    <span class="line line-1"></span>  
+    <span class="line line-2"></span>
+  </div>
+</body>
+</html>
