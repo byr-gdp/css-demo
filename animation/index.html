@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  * {
+    margin:  0;
+    padding: 0;
+  }
+  
+  html, body {
+    width:  100%;
+    height: 100%;
+    background-color: #EFEFEF;
+  }
+  
+  .box {
+    width:                200px;
+    height:               200px;
+    margin:               50px;
+    /*background-color:   #F7B538;*/
+    animation: 1s rainbow infinite alternate forwards;
+    animation-play-state: paused;
+  }
+
+  .box:hover {
+    animation-play-state: running;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-color: #000000;
+    }
+    50% {
+      /*background-color: #ffffff;*/
+      /*background-color: #BA5624;*/
+      /*background-color: #666666*/
+    }
+    100% {
+      background-color: #C52427;
+      /*background-color: #000*/
+      /*background-color:   #FFFFFF;*/
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
