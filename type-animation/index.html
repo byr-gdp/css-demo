@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  @keyframes typing {
+    from{ 
+      width: 0;
+    }
+  }
+
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  h1 {
+    /*需要指定等宽字体*/
+    font-family: Monospace;
+    border-right: 1px solid #000000;
+    overflow: hidden;
+    /*width宽度等于字符数*/
+    width: 48ch;
+    white-space: nowrap;
+    animation: typing 7s steps(48), 
+               blink-caret .5s step-end infinite alternate  
+  }
+  </style>
+</head>
+<body>
+  <h1>This is a demo for typing effect using pure css.</h1>
+</body>
+</html>
