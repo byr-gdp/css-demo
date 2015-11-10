@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>animation-step</title>
+  <style>
+  * {
+    margin:  0;
+    padding: 0;
+  }
+
+  .box {
+    width:            50px;
+    height:           50px;
+    background-color: #F7B538;
+    /*steps中的数字标书两个关键帧之间动画完成需要的步数*/
+    animation:        1s move steps(3) infinite alternate;
+    /*animation:        1s move steps(3, start);*/
+    /*animation:        1s move steps(3, end);*/
+  }
+
+  @keyframes move {
+    100% {
+      width:  200px;
+      height: 50px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
