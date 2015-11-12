@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>circle progress</title>
+  <style>
+  .circle,
+  .circle-left,
+  .circle-right,
+  .circle-overlay {
+    position:      absolute;
+    left:          0;
+    top:           0;
+    width:         100px;
+    height:        100px;
+    border-radius: 50%;
+    box-sizing:    border-box;
+  }
+
+  .circle {
+    border: 10px solid #666666;
+  }
+
+  .circle-left {
+    border:    10px solid #F7B538;
+    clip:      rect(0, 50px, 100px, 0);
+    animation: 6s rotate linear;
+  }
+
+  .circle-right {
+    border:              10px solid #F7B538;
+    clip:                rect(0, 100px, 100px, 50px);
+    animation-fill-mode: backwards;
+    animation:           6s show linear;
+  }
+
+  .circle-overlay {
+    border:              10px solid #666666;
+    clip:                rect(0, 50px, 100px, 0);
+    animation:           6s hide linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    50.1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes hide {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    50.1% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+  <div class="circle-left"></div>
+  <div class="circle-right"></div>
+  <div class="circle-overlay"></div>
+</body>
+</html>
