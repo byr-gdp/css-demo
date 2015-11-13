@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery + CSS3</title>
+  <!-- 利用两个圆半径不同来形成圆环 -->
+  <style>
+  .circle {
+    width:         200px;
+    height:        200px;  
+    position:      absolute;
+    border-radius: 50%;
+    background:    #F7B538;
+  }
+  .wrap-left, .wrap-right {
+    width:    200px; 
+    height:   200px;
+    position: absolute;
+    top:      0;
+    left:     0;
+  }
+  .left, .right {
+    display:       block;
+    width:         200px; 
+    height:        200px;
+    background:    #666666;
+    border-radius: 50%;
+    position:      absolute;
+    top:           0;
+    left:          0;
+    /*transition:    all 1s linear;*/
+    /*transform:   rotate(180deg);*/
+  }
+  .wrap-right, .right {
+    clip: rect(0,auto,auto,100px);
+  }
+
+  .wrap-left, .left {
+    clip: rect(0,100px,auto,0);
+  }
+  .mask {
+    width:         150px;
+    height:        150px;
+    border-radius: 50%;
+    left:          25px;
+    top:           25px;
+    background:    #FFF;
+    position:      absolute;
+    text-align:    center;
+    line-height:   150px;
+    font-size:     16px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="circle">
+    <div class="wrap-left"><div class="left"></div></div>
+    <div class="wrap-right"><div class="right"></div></div>
+    <div class="mask"><span>0</span>%</div>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script>
+  var num = 0;   // 初始化角度
+  var end = 270; // 终止角度
+  var step = 1;  // 步长
+  var t = setTimeout(loop, 0);
+  function loop() {
+    // num+=step;
+    num+=step;
+    console.log('num:' + num);
+    if(num <= end) {
+      if(num < 180) {
+        $(".circle").find(".right").css("transform", "rotate(" + num + "deg)");
+      } else {
+        $(".circle").find(".right").css("transform", "rotate(180deg)");
+        $(".circle").find(".left").css("transform", "rotate(" + (num - 180) + "deg)");
+      }
+      setTimeout(loop, 10);
+    }
+  }
+
+
+ 
+  </script>
+</body>
+</html>
