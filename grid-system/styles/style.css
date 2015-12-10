@@ -1,0 +1,23 @@
+.rect {
+    border:        4px solid #000;
+    width:         48px;
+    height:        48px;
+    border-radius: 10px;
+    margin:        0 auto;
+    margin-top:    18%;
+  }
+
+  .row-name {
+    /*margin-top: 16px;*/
+    margin-top: 1%;
+  }
+
+  .row-link {
+    margin-top: 144px;
+  }
+
+  .row-link-item {
+    font-size:       16px;
+    line-height:     32px;
+    text-decoration: underline;
+  }
