@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  input {
+    display: block;
+  }
+  input[type=date]::-webkit-clear-button,
+  input[type=time]::-webkit-clear-button,
+  input[type=date]::-webkit-inner-spin-button,
+  input[type=time]::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  .time0 {
+
+  }
+
+  .time1::-webkit-clear-button {
+    display: none;
+  }
+
+  .time2::-webkit-clear-button,
+  .time2::-webkit-inner-spin-button {
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <!-- <input type="date"> -->
+  <input type="time" min="09:00" max="23:00" step="900" class='time0'>
+  <input type="time" min="09:00" max="23:00" step="900" class='time1'>
+  <input type="time" min="09:00" max="23:00" step="900" class='time2'>
+
+</body>
+</html>
