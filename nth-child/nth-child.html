@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>nth-child</title>
+  <style>
+  /*n从0开始*/
+  /*nth-child 从1开始*/
+
+  /*
+  p:nth-child(-n+1) {
+    background-color: #666;
+    color: #fff;
+  }
+  */
+
+
+  /*nth-child nth-of-type 不支持类选择器，仅支持元素选择器*/
+  .colorful:nth-child(4) {
+    color: red;
+  }
+
+  p:nth-child(2) {
+    color: green;
+  }
+
+
+
+  /*即使用了 类选择器，最终也会转化为 元素选择器。即不支持 类选择器*/
+/*  .colorful:nth-of-type(4) {
+    color: blue;
+  }*/
+
+  /*  
+  =》
+  p:nth-of-type(4) {
+    color: blue;
+  }
+  */
+  </style>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is a paragraph.</p>
+  <span>test</span>
+  <p class="colorful">This is a paragraph.</p>
+  <p class="colorful">This is a paragraph.</p>
+  <p>This is a paragraph.</p>
+</body>
+</html>
