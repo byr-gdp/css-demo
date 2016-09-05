@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sticky top</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 500px;
+        height: 2000px;
+        margin: 0 auto;
+        background-color: #3c9bf5;
+    }
+    .content{
+        height: 400px;
+    }
+    .sticky{
+        width: 100px;
+        height: 100px;
+        background-color: #f55;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content"></div>
+        <div class="sticky"></div>
+    </div>
+    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+    //sticky top
+    //.sticky offset 是常量，不能放入 if 判断中，否则会出现严重抖动。
+    $window = $(window);
+    $sticky = $(".sticky");
+    var top_offset = $sticky.offset().top;
+    $(window).scroll(function() {
+        if($window.scrollTop() > top_offset){
+            $sticky.css({"position": "fixed", "top": 0});
+        }else{
+            $sticky.css({"position": "static"});
+        }
+    });
+    </script>
+</body>
+</html>

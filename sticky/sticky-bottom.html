@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sticky top</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 500px;
+        height: 2000px;
+        margin: 0 auto;
+        background-color: #3c9bf5;
+    }
+    .content{
+        height: 400px;
+    }
+    .sticky{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 1200px;
+        right: 100px;
+        background-color: #f55;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="content"></div>
+        <div class="sticky"></div>
+    </div>
+    
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script>
+    // sticky down
+    // fixed 时候用 bottom 胜于 top。但这里因为 sticky css 存在 top 属性，设置 bottom 不会生效。
+    // 倘若是正常文档流应该不会存在这个问题，这里仅作参考。
+    $window = $(window);
+    $sticky = $(".sticky");
+    var top_offset = $sticky.offset().top;
+    var diff = $window.height() - $sticky.height();
+    $(window).scroll(function() {
+        if($window.scrollTop() + $window.height() - $sticky.height() > top_offset){
+            $sticky.css({"position": "fixed", "top": diff});
+        }else{
+            $sticky.css({"position": "absolute", "top": 1200, "right": 100});
+        }
+    });
+    </script>
+</body>
+</html>
