@@ -1,0 +1,48 @@
+<!--
+@author: Gong Dapeng
+@date: 2016-12-27
+@description: display: table-cell 示例
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>table-cell</title>
+    <style media="screen">
+    .sidebar,
+    .container,
+    .another-sidebar{
+      display: table-cell;
+      line-height: 50px;
+      height: 100px;
+    }
+
+    .sidebar{
+      background-color: #e43;
+      min-width: 200px;
+      text-align-last: justify;
+      vertical-align: middle;
+    }
+
+    .another-sidebar{
+      min-width: 250px;
+      background-color: #e9e9e9;
+    }
+
+    .container{
+      background-color: #999;
+      width: 100%;
+      /*垂直居中*/
+      vertical-align: middle;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">This is sidebar.</div>
+      <div class="container">This is container.</div>
+      <div class="another-sidebar">This is another sidebar.</div>
+    </div>
+  </body>
+</html>

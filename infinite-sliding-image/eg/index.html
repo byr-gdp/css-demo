@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>eg</title>
+    <style media="screen">
+    .slider{
+      width:700px;
+      height:300px;
+      margin:50px auto;
+      border:1px solid;
+      overflow:hidden;
+    }
+    .slides{
+      width:400%;
+      height:100%;
+      animation:slide 8s linear infinite ;
+      font-size: 36px;
+    }
+    .slides-2{
+      position: relative;
+      top: -300px;
+      width:400%;
+      height:100%;
+      animation: slide2 8s linear infinite;
+      font-size: 36px;
+    }
+    .slider-1, .slider-2, .slider-3, .slider-4, .slider-5, .slider-6, .slider-7, .slider-8{
+      width: 25%;
+      height:100%;
+      float:left;
+      line-height: 300px;
+      text-align: center;
+    }
+    .slider-1{
+      /*background:#233;*/
+    }
+    .slider-2{
+      /*background:#666;*/
+    }
+    .slider-3{
+      /*background:#999;*/
+    }
+    .slider-4{
+      /*background: #3c9bf5;*/
+    }
+
+    @keyframes slide{
+      from {
+        margin-left: 100%;
+      }
+      44% {
+        margin-left: -300%;
+      }
+      46% {
+        margin-left: -400%;
+      }
+      to {
+        margin-left: -400%;
+      }
+    }
+    @keyframes slide2{
+      from{
+        margin-left: 100%;
+      }
+      46% {
+        margin-left: 100%;
+      }
+      50% {
+        margin-left: 0;
+      }
+      to {
+        margin-left: -300%;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <div class="slider-1">1</div>
+        <div class="slider-2">2</div>
+        <div class="slider-3">3</div>
+        <div class="slider-4">4</div>
+      </div>
+      <div class="slides-2">
+        <div class="slider-5">1</div>
+        <div class="slider-6">2</div>
+        <div class="slider-7">3</div>
+        <div class="slider-8">4</div>
+      </div>
+    </div>
+  </body>
+</html>

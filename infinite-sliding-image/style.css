@@ -1,19 +1,19 @@
 .slide {
   position: absolute;
-  width: 100%;
+  width: 600px;
   top: calc(50% - 97.25px);
-  overflow: scroll; }
+  overflow: hidden; }
   .slide .slide-row {
-    width: 2956px;
+    width: 5912px;
     height: 194.5px;
     background-image: url(image.png);
     background-size: 2956px 194.5px;
-    animation: slide 20s linear infinite; }
+    animation: slide 30s linear infinite; }
 
 @keyframes slide {
   from {
     background-position-x: 0; }
   to {
-    background-position-x: -2956px; } }
+    background-position-x: -5912px; } }
 
 /*# sourceMappingURL=style.css.map */

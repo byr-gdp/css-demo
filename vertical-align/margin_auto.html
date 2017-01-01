@@ -1,0 +1,35 @@
+<!--
+@author: Gong Dapeng
+@date: 2016-12-27
+@description: 对于有固定高度、宽度的元素，利用 margin: auto 实现垂直居中
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>margin_auto</title>
+    <style media="screen">
+      .content{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #333;
+        text-align: center;
+
+        /*以下实现文字垂直居中*/
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      Content Here
+    </div>
+  </body>
+</html>

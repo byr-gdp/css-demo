@@ -1,0 +1,34 @@
+<!--
+@author: Gong Dapeng
+@date: 2016-12-27
+@description: 利用 flex 实现垂直居中
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>margin_auto</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      html,body{
+        height: 100%;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content{
+        border: 1px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      Content Here
+    </div>
+  </body>
+</html>
